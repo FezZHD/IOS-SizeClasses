@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BADE8F10A64DCBEFCA49F06025E10A6C39E86CF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "25F12F833BA0266ABC574B2767C9DBB4441EF346" : 9223372036854775807,
+    "BADE8F10A64DCBEFCA49F06025E10A6C39E86CF6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7A4B075B-A8EC-4704-8A7C-D824108B26A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "25F12F833BA0266ABC574B2767C9DBB4441EF346" : "swiftConverter\/",
+    "BADE8F10A64DCBEFCA49F06025E10A6C39E86CF6" : "IOS-SizeClasses\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SizeClass",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SizeClass\/SizeClass.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FezZHD\/swiftConverter",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25F12F833BA0266ABC574B2767C9DBB4441EF346"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FezZHD\/IOS-SizeClasses",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BADE8F10A64DCBEFCA49F06025E10A6C39E86CF6"
+    }
+  ]
+}

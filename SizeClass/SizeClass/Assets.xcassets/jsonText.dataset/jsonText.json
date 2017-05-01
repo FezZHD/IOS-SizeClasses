@@ -1,0 +1,26 @@
+[ 
+  {
+    "imageUri": "sadPepe",
+    "title": "Sad Pepe",
+    "shortDesc": "He is realy sad",
+    "desc": "This Pepe is realy. He saw your life and he is quite sad"
+  },
+  {
+    "imageUri": "cryingPepe",
+    "title": "Crying Pepe",
+    "shortDesc": "He is crying",
+    "desc": "Now Pepe is realy sad. You made him cry"
+  },
+  {
+    "imageUri": "angryPepe",
+    "title": "Angry Pepe",
+    "shortDesc": "Realy Angry Pepe",
+    "desc": "He is so angry. Be careful with him"
+  },
+  {
+    "imageUri": "angryPepeWithGun",
+    "title": "Angry Pepe with a gun",
+    "shortDesc": "Angry and dangerous",
+    "desc": "He is angry and dangerous. Do not make jokes with him"
+  }
+]
