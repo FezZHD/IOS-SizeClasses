@@ -12,6 +12,7 @@
 		6D1CC53F1EB740D4001767F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1CC53D1EB740D4001767F3 /* Main.storyboard */; };
 		6D1CC5411EB740D4001767F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D1CC5401EB740D4001767F3 /* Assets.xcassets */; };
 		6D1CC5441EB740D4001767F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D1CC5421EB740D4001767F3 /* LaunchScreen.storyboard */; };
+		6D2853671EB9448B003289D0 /* TableMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2853661EB9448B003289D0 /* TableMapController.swift */; };
 		6D2FAA851EB768580014EE98 /* ConverterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FAA841EB768580014EE98 /* ConverterController.swift */; };
 		6D2FAA871EB768650014EE98 /* Converter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2FAA861EB768650014EE98 /* Converter.storyboard */; };
 		6D2FAA911EB78AFD0014EE98 /* InternetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FAA8A1EB78AFD0014EE98 /* InternetCell.swift */; };
@@ -42,6 +43,7 @@
 		6D1CC5401EB740D4001767F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D1CC5431EB740D4001767F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D1CC5451EB740D4001767F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D2853661EB9448B003289D0 /* TableMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableMapController.swift; sourceTree = "<group>"; };
 		6D2FAA841EB768580014EE98 /* ConverterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterController.swift; sourceTree = "<group>"; };
 		6D2FAA861EB768650014EE98 /* Converter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Converter.storyboard; sourceTree = "<group>"; };
 		6D2FAA8A1EB78AFD0014EE98 /* InternetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				6D2FAA9C1EB78C390014EE98 /* TableCell.swift */,
 				6D1CC5391EB740D4001767F3 /* AppDelegate.swift */,
 				6D2FAA9A1EB78BC90014EE98 /* Map.storyboard */,
+				6D2853661EB9448B003289D0 /* TableMapController.swift */,
 				6D1CC53B1EB740D4001767F3 /* ViewController.swift */,
 				6D2FAA841EB768580014EE98 /* ConverterController.swift */,
 				6D2FAA861EB768650014EE98 /* Converter.storyboard */,
@@ -277,6 +280,7 @@
 				6D2FAAA31EB78C580014EE98 /* MapController.swift in Sources */,
 				6D2FAA931EB78AFD0014EE98 /* InternetTableController.swift in Sources */,
 				6D2FAA9D1EB78C390014EE98 /* TableCell.swift in Sources */,
+				6D2853671EB9448B003289D0 /* TableMapController.swift in Sources */,
 				6D2FAA911EB78AFD0014EE98 /* InternetCell.swift in Sources */,
 				6D2FAA951EB78AFD0014EE98 /* LocalObject.swift in Sources */,
 				6D1CC53A1EB740D4001767F3 /* AppDelegate.swift in Sources */,
