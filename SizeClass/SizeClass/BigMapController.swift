@@ -19,6 +19,7 @@ class BigMapController: UIViewController,MKMapViewDelegate, UIGestureRecognizerD
     let regionRadius: CLLocationDistance = 100000;
     @IBOutlet var map: MKMapView!
     var currentAnnotation:MKPointAnnotation!;
+    var annotationArray = [MKPointAnnotation]();
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
@@ -29,6 +30,15 @@ class BigMapController: UIViewController,MKMapViewDelegate, UIGestureRecognizerD
             })
             DispatchQueue.main.async {
                 self.activityIndicator?.stopAnimating();
+                for weather in self.weatherArray{
+                    let annotation = MKPointAnnotation();
+                    annotation.coordinate = CLLocationCoordinate2D(latitude: weather.lat, longitude: weather.lon);
+                    annotation.title = weather.city;
+                    annotation.subtitle = "Current weather is : \(String(format:"%.2f",weather.temp)) °C";
+                    self.map.addAnnotation(annotation);
+                    self.annotationArray.append(annotation);
+                }
+                
             }
         }
     }
@@ -47,8 +57,8 @@ class BigMapController: UIViewController,MKMapViewDelegate, UIGestureRecognizerD
         recognizer.delegate = self;
         map.delegate = self;
         map.addGestureRecognizer(recognizer);
-        map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48, longitude: -100), regionRadius * 2.0, regionRadius * 2.0), animated: true);
-        
+        //map.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 48, longitude: -100), regionRadius * 2.0, regionRadius * 2.0), animated: true);
+        centerMap(location: CLLocation(latitude: 48, longitude: -100), regionValue: regionStartRadius);
         // Do any additional setup after loading the view.
     }
 
@@ -60,24 +70,23 @@ class BigMapController: UIViewController,MKMapViewDelegate, UIGestureRecognizerD
     func mapPress(gestureRecognizer: UILongPressGestureRecognizer){
         if (currentAnnotation != nil){
             map.deselectAnnotation(currentAnnotation, animated: true);
-            map.removeAnnotation(currentAnnotation);
+            //map.removeAnnotation(currentAnnotation);
         }
         let location = gestureRecognizer.location(in: map)
         let mapLocation = self.map.convert(location, toCoordinateFrom: map);
-        let object = getCorrectCity(mapLocation: mapLocation);
-        centerMap(location: CLLocation(latitude: object.lat, longitude: object.lon), regionValue: regionStartRadius);
-        let annotation = MKPointAnnotation();
-        annotation.title = object.city;
-        annotation.subtitle = "Current weather is : \(String(format:"%.2f",object.temp)) °C";
-        annotation.coordinate = CLLocationCoordinate2D(latitude: object.lat, longitude: object.lon);
-        currentAnnotation = annotation;
-        centerMap(location: CLLocation(latitude: object.lat, longitude: object.lon), regionValue: regionRadius);
-        map.addAnnotation(currentAnnotation);
-        map.selectAnnotation(currentAnnotation, animated: true);
+        let index = getCorrectCity(mapLocation: mapLocation);
+        //currentAnnotation = MKPointAnnotation();
+        currentAnnotation = annotationArray[index];
+       
+        //annotation.coordinate = CLLocationCoordinate2D(latitude: object.lat, longitude: object.lon);
+        //currentAnnotation = annotation;
+        centerMap(location: CLLocation(latitude: weatherArray[index].lat, longitude: weatherArray[index].lon), regionValue: regionRadius);
+        //map.addAnnotation(currentAnnotation);
+        map.selectAnnotation(annotationArray[index], animated: true);
         print("tap")
     }
     
-    func getCorrectCity(mapLocation:CLLocationCoordinate2D) -> WeatherStats{
+    func getCorrectCity(mapLocation:CLLocationCoordinate2D) -> Int{
         var currentIndex:Int!;
         var currentLenght:Double = 0;
         for(index, city) in weatherArray.enumerated(){
@@ -91,7 +100,7 @@ class BigMapController: UIViewController,MKMapViewDelegate, UIGestureRecognizerD
                 currentIndex = index;
             }
         }
-        return weatherArray[currentIndex!];
+        return currentIndex;
     }
     
     
