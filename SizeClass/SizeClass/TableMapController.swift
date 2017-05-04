@@ -18,6 +18,7 @@ class TableMapController: UIViewController, UITableViewDataSource, UITableViewDe
     var weatherArray = [WeatherStats]();
     
     
+    @IBOutlet var map: MKMapView!
     var weatherService = WeatherService();
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -85,6 +86,15 @@ class TableMapController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if (UIDevice.current.orientation.isLandscape){
+            
+            let index = self.table.indexPathForSelectedRow?.row;
+            let annotation = MKPointAnnotation();
+            annotation.coordinate = CLLocationCoordinate2D(latitude: self.weatherArray[index!].lat, longitude: self.weatherArray[index!].lon);
+            annotation.title = self.weatherArray[index!].city;
+            annotation.subtitle = "Current weather is : \(String(format:"%.2f",self.weatherArray[index!].temp)) °C";
+            map.addAnnotation(annotation);
+            map.selectAnnotation(annotation, animated: true);
+            //self.annotationArray.append(annotation);
             return false;
         }else{
             return true;

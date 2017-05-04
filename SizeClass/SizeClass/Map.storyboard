@@ -108,7 +108,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fxo-ks-9H2" id="NBp-ny-3yG">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dS-aZ-fea">
@@ -118,13 +118,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Z-ik-5aM">
-                                                    <rect key="frame" x="232" y="32" width="73" height="36"/>
+                                                    <rect key="frame" x="271" y="32" width="73" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-uU-LyS">
-                                                    <rect key="frame" x="310" y="32" width="32" height="36"/>
+                                                    <rect key="frame" x="349" y="32" width="32" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -192,6 +192,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="9mD-pL-yzo"/>
                     <connections>
+                        <outlet property="map" destination="dGd-2b-ENr" id="pT4-wF-aCh"/>
                         <outlet property="table" destination="Y1m-TC-9s5" id="JOz-qu-Lpi"/>
                     </connections>
                 </viewController>
